@@ -7,5 +7,9 @@ main section#game #grid{
 .my-square{
     width: calc(100% / 10); 
     height: calc(100% / 10);
-    border: 2px solid tomato;
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border: 2px solid tomato; 
 }

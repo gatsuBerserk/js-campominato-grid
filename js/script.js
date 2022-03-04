@@ -23,12 +23,19 @@
             // // Inseriamolo nel DOM
             // domGrid.appendChild(element); 
             
-            //Creaimo l'elemento div con funzione 
-            function createGrid() { 
+            //Creaimo l'elemento div con funzione  
+            function createGrid(number) { 
                 // Creazione elemento "div"
                 const element = document.createElement("div"); 
-                // Aggiunta classe
-                element.classList.add("my-square"); 
+                
+                element.addEventListener("click", function(){ 
+                    // Aggiungiamo la classe 
+                    element.classList.toggle("bg-warning");
+                    console.log(element); 
+                    });
+                // Aggiunta classe 
+                element.classList.add("my-square");
+                element.innerHTML= `${number}`
                 return element;
             };
             
@@ -37,44 +44,26 @@
             play.addEventListener("click", function(){ 
                 domGrid.innerHTML="";
                 if(gameDifficulty.value === "easy"){
-                    for(let i = 0; i < 100; i ++){ 
+                    for(let i = 1; i < 100; i ++){ 
                         // Singolo quadrato 
-                        const singleSquare = createGrid(); 
-                        // Aggiungiamo un evento  
-                        singleSquare.addEventListener("click", function(){ 
-                        // Aggiungiamo la classe 
-                        singleSquare.classList.toggle("bg-warning");
-                        console.log(singleSquare); 
-                        })
+                        const singleSquare = createGrid(i); 
                         // Inseriamo gli elementi nel DOM
                         domGrid.appendChild(singleSquare);
         
                     }
 
                     } else if(gameDifficulty.value === "medium"){
-                        for(let i = 0; i < 80; i ++){ 
+                        for(let i = 1; i <= 80; i ++){ 
                             // Singolo quadrato 
-                            const singleSquare = createGrid(); 
-                            // Aggiungiamo un evento  
-                            singleSquare.addEventListener("click", function(){ 
-                            // Aggiungiamo la classe 
-                            singleSquare.classList.toggle("bg-warning");
-                            console.log(singleSquare); 
-                            })
+                            const singleSquare = createGrid(i); 
                             // Inseriamo gli elementi nel DOM
                             domGrid.appendChild(singleSquare);
             
                         }
                     } else{
-                            for(let i = 0; i < 40; i ++){ 
+                            for(let i = 1; i <= 40; i ++){ 
                                 // Singolo quadrato 
-                                const singleSquare = createGrid(); 
-                                // Aggiungiamo un evento  
-                                singleSquare.addEventListener("click", function(){ 
-                                // Aggiungiamo la classe 
-                                singleSquare.classList.toggle("bg-warning");
-                                console.log(singleSquare); 
-                                })
+                                const singleSquare = createGrid(i);
                                 // Inseriamo gli elementi nel DOM
                                 domGrid.appendChild(singleSquare);
                 
