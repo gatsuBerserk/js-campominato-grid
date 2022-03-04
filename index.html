@@ -10,7 +10,41 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body> 
+    <main>
+        <div class="container">
+            <section id="header">
+                <div class="row d-flex align-items-center">
+                    <div class="col-6">
+                        <h1>
+                            Campo Minato
+                        </h1>
+                    </div>
+                    <div class="col-6">
+                        <span> 
+                            Seleziona difficoltà
+                        </span>
+                        <select class="mx-3" id="difficulty">
+                            <option value="easy">Facile</option>
+                            <option value="medium">Intermedio</option>
+                            <option value="hard">Difficile</option>
+                        </select> 
+                        <button class="btn btn-secondary">
+                            Play
+                        </button>
+                    </div>
+                </div>
+            </section> 
+            <section id="game"> 
+                <div class="row">
+                    <div class="col-12">
+                        <div id="grid">
+                        </div>
+                    </div>
+                </div> 
+            </section>
+        </div>
+    </main>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
