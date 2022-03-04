@@ -30,7 +30,7 @@
                 
                 element.addEventListener("click", function(){ 
                     // Aggiungiamo la classe 
-                    element.classList.toggle("bg-warning");
+                    element.classList.toggle("bg-warning",);
                     console.log(element); 
                     });
                 // Aggiunta classe 
@@ -44,7 +44,7 @@
             play.addEventListener("click", function(){ 
                 domGrid.innerHTML="";
                 if(gameDifficulty.value === "easy"){
-                    for(let i = 1; i < 100; i ++){ 
+                    for(let i = 1; i <= 100; i ++){ 
                         // Singolo quadrato 
                         const singleSquare = createGrid(i); 
                         // Inseriamo gli elementi nel DOM

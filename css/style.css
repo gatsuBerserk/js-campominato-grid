@@ -1,7 +1,6 @@
 main section#game #grid{
     width: 800px;
     height: 800px;
-    border: 1px solid red; 
     margin: 0 auto;
 }
 .my-square{
@@ -11,5 +10,8 @@ main section#game #grid{
     display: flex; 
     align-items: center; 
     justify-content: center;
-    border: 2px solid tomato; 
+    border: 2px solid whitesmoke; 
+} 
+body{
+    background-color: #fd731d;
 }
