@@ -42,7 +42,9 @@
             
 
             play.addEventListener("click", function(){ 
+                // Reset 
                 domGrid.innerHTML="";
+                // Creazione Griglia di gioco            
                 if(gameDifficulty.value === "easy"){
                     for(let i = 1; i <= 100; i ++){ 
                         // Singolo quadrato 
